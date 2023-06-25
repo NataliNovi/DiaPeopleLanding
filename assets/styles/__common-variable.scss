@@ -1,0 +1,79 @@
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 479px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 1024px;
+$grid-breakpoint-xl: 1280px;
+$grid-breakpoint-xxl: 1400px;
+
+//@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+//$font-family-serif: Georgia, 'Times New Roman', serif;
+//$font-family-sans-serif: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$font-family-sans-serif: 'IBM Plex Sans', sans-serif;
+$font-family-different: 'Philosopher', sans-serif;
+
+
+$color-main: white;
+// $color-blue: #022a59;
+//$container-max-width: 1296px;
+
+//$color-blue: #044151;
+//$color-bright-blue: #5e8eed;
+$color-bright-blue: #3963b6;
+$color-blue-burger: #96b5f3;
+$color-blue: #04215c;
+$color-dark-text: #021e25;
+//$color-button: rgb(243, 228, 17);
+$color-button: #fcee5d;
+// $color-light: #b8ecf6;
+//$color-light: rgb(162, 200, 236);
+//$color-blue-gradient: rgb(187, 215, 243);
+$color-beige: #ffe6bd;
+//$color-menu: rgb(124, 176, 228);
+$color-menu: #ffe6bd;
+
+//linear-gradient(3600deg, rgba(212, 229, 246, 1) 15%, rgba(187, 215, 241, 1) 40%, rgba(162, 200, 236, 1) 73%);
+$color-blue-gradient-nav: rgb(187, 215, 243);
+//linear-gradient(270deg, rgba(212, 229, 246, 1) 15%, rgba(187, 215, 241, 1) 40%, rgba(162, 200, 236, 1) 73%);
+$color-blue-gradient-sub-nav: rgb(187, 215, 243);
+
+//linear-gradient(90deg, rgba(212, 229, 246, 1) 15%, rgba(187, 215, 241, 1) 40%, rgba(162, 200, 236, 1) 73%);
+$color-gray: rgba(0, 0, 0, .25);
+//$gradient-light: linear-gradient(90deg, rgba(166, 236, 250, 1) 0%, rgba(255, 255, 255, 1) 93%);
+$back: rgb(212, 229, 246);
+
+
+/* Оригинальные переменные HOMEPAGE  */
+// $blue-background: #022a59;
+$blue-background: #096265;
+$white-background: white;
+
+$font-size-small: 14px;
+$font-size-medium: 18px;
+$font-size-large: 26px;
+$font-size-extra-large: 32px;
+
+
+/* А тут какие-то классы и стили для тегов, тоже общие для всего проекта */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family-sans-serif;
+    color: $color-main;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    //max-width: 1920px;
+    margin: 0 auto;
+}
