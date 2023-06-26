@@ -61,27 +61,62 @@ if (iconMenu) {
   });
 }
 
-function onSearch() {
-  let gifImg = document.getElementById("gifSearch").value;
-  //здесь параметр запишем через слэш
-  fetch(
-    "https://api.giphy.com/v1/gifs/search?api_key=WXe1aojMCLcfHRAB4lBwdDfeELmLMbk0&q=" +
-      gifImg +
-      "&limit=2&offset=0&rating=g&lang=en"
-  )
-    .then((response) => response.json())
-    .then((result) => {
-      //console.log(result);
-      let resultGif = document.getElementById("resultGif");
-      resultGif.innerHTML = "";
-      if (result.data && result.data.length > 0) {
-        result.data.forEach((element) => {
-          resultGif.innerHTML += `<img class = "pict" src=${element.images.original.url}<br>`;
-        });
-      } else {
-        alert("No results! Enter another key word or phrase");
-      }
-    })
+//прокрутка при клике
+const menuLinks = document.querySelectorAll(".menu-burger__link[data-goto]");
+if (menuLinks.length > 0) {
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
 
-    .catch((error) => console.log(error));
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (
+      menuLink.dataset.goto &&
+      document.querySelector(menuLink.dataset.goto)
+    ) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue =
+        gotoBlock.getBoundingClientRect().top +
+        pageYOffset -
+        document.querySelector("header-burger").offsetHeight;
+
+      if (iconMenu.classList.contains("_active")) {
+        document.body.classList.remove("_lock");
+        iconMenu.classList.remove("_active");
+        menuBody.classList.remove("_active");
+      }
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth",
+      });
+
+      e.preventDefault();
+    }
+  }
 }
+
+// function onSearch() {
+//   let gifImg = document.getElementById("gifSearch").value;
+//   //здесь параметр запишем через слэш
+//   fetch(
+//     "https://api.giphy.com/v1/gifs/search?api_key=WXe1aojMCLcfHRAB4lBwdDfeELmLMbk0&q=" +
+//       gifImg +
+//       "&limit=2&offset=0&rating=g&lang=en"
+//   )
+//     .then((response) => response.json())
+//     .then((result) => {
+//       //console.log(result);
+//       let resultGif = document.getElementById("resultGif");
+//       resultGif.innerHTML = "";
+//       if (result.data && result.data.length > 0) {
+//         result.data.forEach((element) => {
+//           resultGif.innerHTML += `<img class = "pict" src=${element.images.original.url}<br>`;
+//         });
+//       } else {
+//         alert("No results! Enter another key word or phrase");
+//       }
+//     })
+
+//     .catch((error) => console.log(error));
+// }
