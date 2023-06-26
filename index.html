@@ -94,16 +94,16 @@
 
             <nav class="menu-burger__body">
                 <ul class="menu-burger__list">
-                   <li><a href='#main' class = "menu-burger__link main">Главная страница</a></li>
+                 
                    <li><a href='#about_us' class = "menu-burger__link about_us">О нас</a></li>
                    <li>
                     <a href='#anons_diadzetka' class="menu-burger__link anons_diadzetka">Анонсы канала DiaDzetka</a>
                    </li>
                    <li>
-                    <a href='#diapeople_meets' class="menu-burger__link diapeople_meets">Фотоотчеты наших встреч<a>
+                    <a href='#diapeople_meets' class="menu-burger__link diapeople_meets">Фотоотчеты и анонсы наших встреч<a>
                    </li>
                    <li>
-                    <a href='#diabete_news' class="menu-burger__link diabete_news">Новости из мира диабета</a>
+                    <a href='#diabete_news' class="menu-burger__link diabete_news">Новости и факты из мира диабета</a>
                    </li>
                    <li>
                     <a href='#partners' class="menu-burger__link partnerts">Партнёры </a>
@@ -111,6 +111,8 @@
                    <li>
                     <a href='#community' class="menu-burger__link community">Сообщества, каналы, форумы</a>
                    </li>
+
+                   <li><a href='#contacts' class = "menu-burger__link contacts">Контакты</a></li>
 
                 </ul>
             </nav>
@@ -152,13 +154,15 @@
 
         <nav class = "main-menu" id="mainNav">
         <ul class="container-nav">
-        <li class = "nav__item nav__item_primary"> <a href='#main'>Главная страница</a>
+  
         <li class = "nav__item nav__item_primary"> <a href='#about_us'>О нас</a>
+        <li class = "nav__item nav__item_primary"> <a href='#na_svazi'>Будьте на связи</a></li>
        <li class = "nav__item nav__item_primary"> <a href='#anons_diadzetka'>Анонсы канала DiaDzetka</a></li>
-       <li class = "nav__item nav__item_primary"> <a href='#diapeople_meets'>Фотоотчеты наших встреч</a></li>
-       <li class = "nav__item nav__item_primary"> <a href='#diabete_news'>Новости из мира диабета</a></li>
+       <li class = "nav__item nav__item_primary"> <a href='#diapeople_meets'>Фотоотчеты и анонсы наших встреч</a></li>
+       <li class = "nav__item nav__item_primary"> <a href='#diabete_news'>Новости и факты из мира диабета</a></li>
        <li class = "nav__item nav__item_primary"> <a href='#partners'>Партнёры </a></li>
        <li class = "nav__item nav__item_primary"> <a href='#community'>Сообщества, каналы, форумы</a></li>
+       <li class = "nav__item nav__item_primary"> <a href='#contacts'>Контакты</a>
     </nav>
 
      <!-- nav End -->
@@ -213,7 +217,7 @@
     
         <div class="articles">
 
-        <article class = "article__community-describe">
+        <article class = "article__community-describe" id="about_us">
 
             <div class="article-border">
        <div class="text-center"> <h3>О нас</h3></div>
@@ -243,8 +247,8 @@
            
         </article>
 
-
-
+  
+        <article class = "article__subscribe" id="na_svazi">
             <div class="subscribe__form">
             <div class="subscribe__form_header">Будьте на связи!</div>
 
@@ -268,13 +272,11 @@
                   </div>
                 </div>
 
-             
-  
           <!-- Пользовательское солашение -->
           <div class="form-group form-agree form-check">
             <input class="form-check-input" type="checkbox" name="agree" id="agree" required value="true">
-            <label class="form-check-label" for="agree">Нажимая кнопку, я принимаю условия <a href="#">Пользовательского
-                соглашения</a> и даю своё согласие на обработку моих персональных данных</label>
+            <label class="form-check-label" for="agree">Нажимая кнопку, я принимаю условия <a href="#"><span class="user-agreement">Пользовательского
+                соглашения</span></a> и даю своё согласие на обработку моих персональных данных</label>
             <div class="invalid-feedback"></div>
           </div>
   
@@ -296,73 +298,115 @@
   
       </div>
 
-            <!-- <div class="subscribe__form_input-button">
-                <input class="input input__form_contact" type="text" placeholder="Ваш номер телефона или почта">
-                <button class = "button input__form_button">Сохранить</button>
-            </div> -->
         </div>
 
-        <article class = "article article__links">
-            <div class="link link__diabete-school"><a class="link__link-button" href='/diabet-school.html'>Школа диабета</a></div>
-            <div class="link link__partners"><a class="link__link-button" href='/partners.html'>Партнеры.<br> Что купить. <br>Где узнать. </a></div>
-            <div class="link link__sovet"><a class="link__link-button" href='/our-sovet.html'>Наш Совет</a></div>
-            <div class="link link__for-school"> <a class="link__link-button"  href='/for-school.html'>Медицинским работникам школ <br> и детских садов</a></div>
-        </article>
+        <!-- </div> -->
 
-        <div class="line"></div>
-
-        <article class = "article article__news">
-            <div class="new article__news_diadetka">Анонсы канала DiaDzetka</div>
-            <div class="new article__news_worldnews"><a href='/news.html'>Новости и факты из мира диабета </a></div>
-            <div class="new article__news_events">Анонсы и фотоотчеты с событий сообщества</div>
-        </article>
-
-    </div>
-
-
-        <!-- <div class="test">
-        <div class="weather">
-            <p > Введите ключевое слово для поиска GIF</p>
-            <input  type = "text" id = "gifSearch">
-            <button  id="searchButton" onclick="onSearch()">Искать</button>
-            <div id="resultGif"></div>
+        <div class="article__viber-contact">
+            <p>Вы можете написать нам на почту: diapeople.bel@gmail.com,</p>
+            <p>связаться по номеру телефона: +375 29 355-56-63,</p>
+            <p>а также присоединиться к группе <a href = "https://invite.viber.com/?g2=AQB9X8B28dMBCkiwRZi3FwVCsCHzdRGzv%2FCSCu%2FFfwzIYXxjefNnjXMUofMFUU%2Fl" target="blank"><span class="article__viber-contact_saharok">"Сахарок. Беларусь" в Viber </span></a> </p>
         </div>
 
-        <div class="wrapper">
-            <input type="radio" name="point" id="slide1" checked>
-            <input type="radio" name="point" id="slide2">
-            <input type="radio" name="point" id="slide3">
-            <input type="radio" name="point" id="slide4">
-            <input type="radio" name="point" id="slide5">
-            <div class="slider">
-                <div class="slides slide1"></div>
-                <div class="slides slide2"></div>
-                <div class="slides slide3"></div>
-                <div class="slides slide4"></div>
-                <div class="slides slide5"></div>
-            </div>	
-            <div class="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
+        </article>
+
+        <!-- анонсы, новости, фотоотчеты -->
+        <article class = "article__news">
+
+            <div class="new article__news_diadetka" id="anons_diadzetka">
+                <h3>Анонсы канала DiaDzetka</h3>
+
+                <div class="new-describe">
+                    <img class = "new-describe__new-photo" src = "./assets/images/diadzetka.jpeg">
+                    <div class="new-describe__new-text">Скоро на канале новое видео про ботанический сад</div>
+                </div>
+          
+
+                <div class="new-describe">
+                    <img class = "new-describe__new-photo" src = "./assets/images/diadzetka.jpeg">
+                    <div class="new-describe__new-text">Скоро на канале новое видео из контактного зоопарка</div>
             </div>
+
+            </div>
+
+            <div class="new article__news_events">
+                <h3>Анонсы и фотоотчеты с событий сообщества</h3>
+
+                <div class="event-anons">
+                    <img class = "event-anons__anons-photo" src = "./assets/images/diadzetka.jpeg">
+                    <div class="event-anons__anons-text">Следующая встреча состоится тогда-то</div>
+                </div>
+
+                <div class="event-describe">
+                    <img class = "event-describe__event-photo-gallery" src = "./assets/images/diadzetka.jpeg">
+                    <div class="event-describe__slider-prev-next"> <button>  &#8592;prev </button>  <button>next &#8594; </button></div>
+                    <div class="event-describe__event-text">19 июня ДиаМамы встретились пообщаться и отдохнуть, а папы и детки - веселись</div>
+                </div>
+
+                <div class="event-describe">
+                    <img class = "event-describe__event-photo-gallery" src = "./assets/images/diadzetka.jpeg">
+                    <div class="event-describe__slider-prev-next"> <button>  &#8592;prev </button>  <button>next &#8594; </button></div>
+                    <div class="event-describe__event-text">22 июля состоялась поездка в контактный зоопарк Диприз</div>
+                </div>
+
+                <button>Смотреть больше</button>
+
+            </div>
+            
+            
+            <div class="new article__news_world-news">
+                <h3>Новости и факты из мира диабета</h3>
+
+                <div class="world-new-describe">
+                    <img class = "world-new-describe__world-new-photo" src = "./assets/images/diadzetka.jpeg">
+                    <div class="world-new-describe__world-new-text">Учёные думали</div>
+                </div>
+          
+
+                <div class="world-new-describe">
+                    <img class = "world-new-describe__world-new-photo" src = "./assets/images/diadzetka.jpeg">
+                    <div class="world-new-describe__world-new-text">Учёные придумали</div>
+                </div>
+
+                <button>Читать больше</button>
+            
+            </div>
+        </article>
+
+
+        <article class = "article__links">
+
+            <div class="link link__partners">Партнеры:
+            <p><a href="http://diabetica.by" target = "_blank" > <span class="zarga-medica">ООО «ЗАРГА Медика»</span></a></p>
+            </div>
+
+            <div class="link link__partners">Сообщества, каналы, форумы:
+                <p><a href="https://invite.viber.com/?g2=AQB9X8B28dMBCkiwRZi3FwVCsCHzdRGzv%2FCSCu%2FFfwzIYXxjefNnjXMUofMFUU%2Fl" target = "_blank" > <span class="zarga-medica">Сахарок. Беларусь</span></a></p>
+                </div>
+            <!-- <div class="link link__sovet">Наш Совет</div> -->
+
+            <!-- <div class="link link__diabete-school"><a class="link__link-button" href='/diabet-school.html'>Школа диабета</a></div> -->
+            <!-- <div class="link link__partners"><a class="link__link-button" href='/partners.html'>Партнеры.<br> Что купить. <br>Где узнать. </a></div> -->
+            <!-- <div class="link link__sovet"><a class="link__link-button" href='/our-sovet.html'>Наш Совет</a></div> -->
+            <!-- <div class="link link__for-school"> <a class="link__link-button"  href='/for-school.html'>Медицинским работникам школ <br> и детских садов</a></div> -->
+        </article>
+
+        <article class="article__confucius">
+            <img class="article__confucius_confucius-photo" src="./assets/images/confucius.jpg" class="img_responsive" alt="Confucius"/>
+        </article>
+    </div>
         </div>
-
-
-
-
-        </div> -->
-    <!-- main End -->
+  
 </main>
 
-
-
+  <!-- main End -->
 
 <footer class="footer">
 
-    <p class = "footer__community-name">«Социальные коммуникации и взаимопомощь диабетиков «ДиаЛюди»</p>
+    <p class = "footer__community-name">   Учреждение "Социальные коммуникации и взаимопомощь диабетиков "ДИАЛЮДИ" 
+        <br>
+        УНП 193673611
+        <br></p>
 
     <div class = "footer__button-footer_donate">
         <button class = "button button__button-donate">Поддержать проект</button>
@@ -370,13 +414,13 @@
 
     
 
-    <div class = footer__contacts>    Контакты:
+    <div class = footer__contacts>    
+    
+        Республика Беларусь, 220090, Минск, Логойский тракт, 22А, пом.44, офис 1.
         <br>
-       diapeople@gmail.com
+        diapeople.bel@gmail.com
         <br>
-      Республика Беларусь, г. Минск, улица Мира, 1/1
-        <br>
-      +375 29 555 66 77
+        +375 29 355 56 63
     </div>
 
 
